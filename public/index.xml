@@ -6,8 +6,15 @@
     <description>Recent content on Senath&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Dec 2023 06:21:47 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 04 May 2025 15:38:50 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>0x06</title>
+      <link>http://localhost:1313/posts/0x06/</link>
+      <pubDate>Sun, 04 May 2025 15:38:50 +0530</pubDate>
+      <guid>http://localhost:1313/posts/0x06/</guid>
+      <description>0x06 — why I&amp;rsquo;ve been gone It’s been a while&amp;hellip; Yeah, I know. So&amp;hellip; where were we? I think I fell into a black hole somewhere around mid-2024. Climbing out now, coffee in hand.. If you’re wondering what happened — I did my A/L exam. Yep, the whole “life-defining standardized test” thing. That was the boss battle of 2024. Spoiler: I made it out alive&#xA;The results dropped this month, and I actually did well enough to get into a government uni.</description>
+    </item>
     <item>
       <title>0x05</title>
       <link>http://localhost:1313/posts/0x05/</link>
@@ -48,14 +55,14 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>This place is where my scattered thoughts find solace, a sanctuary where I am both the artist and the canvas. It is a realm of silence, where my mind breathes freely, untethered. My words flow, unfiltered and true, like leaves drifting on a breeze, untouched by the world’s noise. Hi, I&amp;rsquo;m Senath.&#xA;I’m a 20y old guy from Sri Lanka. Sinhala is my native language. I like low-level programming and other computer stuff.</description>
+      <description>Hi, I&amp;rsquo;m Senath.&#xA;I’m a 20y old guy from Sri Lanka. I like low-level programming and other computer stuff. Outside of coding, you’ll find me diving into math, exploring music, or getting lost in a good book. I’m passionate about open-source software and I use GNU/Linux for nearly everything. Occasionally, you’ll find me playing games on Steam&#xA;This is the space where my chaotic thoughts find order, a realm where I am in control, untouched by manipulation or distortion.</description>
     </item>
     <item>
       <title>Contact</title>
       <link>http://localhost:1313/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/contact/</guid>
-      <description>Want to reach out? Email: dragnosmz [at] proton [dot] me </description>
+      <description>How to reach me? Email: dragnosmz [at] proton [dot] me </description>
     </item>
   </channel>
 </rss>
