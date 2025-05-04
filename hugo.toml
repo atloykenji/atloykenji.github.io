@@ -1,0 +1,24 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = "Senath's Blog"
+theme="archie"
+
+[params]
+  mode = "dark"
+  subtitle = "Welcome to My open notebook on computing and beyond"
+  math = true
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/about"
+  weight = 3
+
+[[menu.main]]
+  name = "Contact"
+  url = "/contact"
+  weight = 3

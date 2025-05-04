@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Senath&#39;s Blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Senath&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Dec 2023 06:21:47 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>0x05</title>
+      <link>http://localhost:1313/posts/0x05/</link>
+      <pubDate>Fri, 08 Dec 2023 06:21:47 +0530</pubDate>
+      <guid>http://localhost:1313/posts/0x05/</guid>
+      <description>0x05 — you won&amp;rsquo;t see me for a year or two Just a quick note if you’ve been reading along, this has always been a personal blog. Lately, it&amp;rsquo;s been all programming talk, but I’m feeling like it’s time to slow down and shift focus a bit There’s something important I need to give my full attention to&amp;hellip; something that’s been quietly building in the background for a while now. It’s not burnout, and it’s not goodbye&amp;hellip; just a pause while I try to give this next chapter the space it deserves.</description>
+    </item>
+    <item>
+      <title>0x04</title>
+      <link>http://localhost:1313/posts/0x04/</link>
+      <pubDate>Wed, 01 Nov 2023 09:24:47 +0530</pubDate>
+      <guid>http://localhost:1313/posts/0x04/</guid>
+      <description>0x04 — systemdo or systemdon&amp;rsquo;t Sometimes in the *nix community, people will tell you things like &amp;ldquo;systemd is bad&amp;rdquo; and you shouldn&amp;rsquo;t use it.&#xA;After that, they will bandy reasons why systemd is considered to be problematic.&#xA;For any normal or informed user, some of the arguments against systemd may hold some validity.&#xA;However, for users unfamiliar with nix, these are misleading justifications for not utilizing systemd.&#xA;This blog entry is specifically targeted towards the latter crowd.</description>
+    </item>
+    <item>
+      <title>0x03</title>
+      <link>http://localhost:1313/posts/0x03/</link>
+      <pubDate>Tue, 04 Jul 2023 01:11:55 +0530</pubDate>
+      <guid>http://localhost:1313/posts/0x03/</guid>
+      <description>0x03 — a love letter to forums Time goes on, technology advances, but when I was younger, I was captivated by forums.&#xA;I don&amp;rsquo;t know the particulars of it, but there&amp;rsquo;s a strange sense of satisfaction in posting on a board and repeatedly refreshing the page until someone responds.&#xA;That&amp;rsquo;s something that nowadays technology has taken from us.&#xA;Why would people want to engage in a forum, create a post seeking assistance or initiating a discussion when they can go on Discord and get a response near instantly?</description>
+    </item>
+    <item>
+      <title>0x02</title>
+      <link>http://localhost:1313/posts/0x02/</link>
+      <pubDate>Mon, 14 Mar 2022 10:12:55 +0530</pubDate>
+      <guid>http://localhost:1313/posts/0x02/</guid>
+      <description>0x02 —__always_inline, linux If you&amp;rsquo;re attempting to install a non-glibc Linux distribution using a Linux 5.X kernel, you&amp;rsquo;ll encounter this error while building the kernel.&#xA;/usr/include/linux/byteorder/little_endian.h:44:8: error: unknown type name &#39;__always_inline&#39;&#xA;On a system running glibc, normally this isn&amp;rsquo;t an issue; __always_inline is defined. However, this is not the situation on most systems that utilize musl or other libc libraries.&#xA;So, as a quick fix, open up /usr/include/linux/swab.h in your flavor of text editor, and include linux/stddef.</description>
+    </item>
+    <item>
+      <title>0x01</title>
+      <link>http://localhost:1313/posts/0x01/</link>
+      <pubDate>Wed, 21 Apr 2021 08:20:47 +0530</pubDate>
+      <guid>http://localhost:1313/posts/0x01/</guid>
+      <description>0x01 — Hello, World! This is my little corner of the internet, where I usually write whatever comes to my mind&amp;hellip; a little about me, the work I do, my system, etc.&#xA;I&amp;rsquo;m Senath, I go by Dragnosmz on the internet. I&amp;rsquo;m from Sri Lanka.&#xA;I&amp;rsquo;m quite obviously a programmer. I code some random things when I feel like it. Occasionally, I dabble in sysadmin stuff.&#xA;I remember spending (too) many hours on it watching YouTube, ricing, updating configurations, gaming and God knows what else.</description>
+    </item>
+  </channel>
+</rss>

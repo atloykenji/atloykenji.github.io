@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>0x04 - Senath&#39;s Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="0x04 — systemdo or systemdon&rsquo;t Sometimes in the *nix community, people will tell you things like &ldquo;systemd is bad&rdquo; and you shouldn&rsquo;t use it.
+After that, they will bandy reasons why systemd is considered to be problematic.
+For any normal or informed user, some of the arguments against systemd may hold some validity.
+However, for users unfamiliar with nix, these are misleading justifications for not utilizing systemd.
+This blog entry is specifically targeted towards the latter crowd." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/posts/0x04/">
+  <meta property="og:site_name" content="Senath&#39;s Blog">
+  <meta property="og:title" content="0x04">
+  <meta property="og:description" content="0x04 — systemdo or systemdon’t Sometimes in the *nix community, people will tell you things like “systemd is bad” and you shouldn’t use it.
+After that, they will bandy reasons why systemd is considered to be problematic.
+For any normal or informed user, some of the arguments against systemd may hold some validity.
+However, for users unfamiliar with nix, these are misleading justifications for not utilizing systemd.
+This blog entry is specifically targeted towards the latter crowd.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-11-01T09:24:47+05:30">
+    <meta property="article:modified_time" content="2023-11-01T09:24:47+05:30">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="0x04">
+  <meta name="twitter:description" content="0x04 — systemdo or systemdon’t Sometimes in the *nix community, people will tell you things like “systemd is bad” and you shouldn’t use it.
+After that, they will bandy reasons why systemd is considered to be problematic.
+For any normal or informed user, some of the arguments against systemd may hold some validity.
+However, for users unfamiliar with nix, these are misleading justifications for not utilizing systemd.
+This blog entry is specifically targeted towards the latter crowd.">
+
+        <link href="http://localhost:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css"   />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://localhost:1313/">Senath&#39;s Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/contact">Contact</a>
+		
+		
+	</nav>
+</header>
+
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">0x04</h1>
+          <div class="meta">Posted on Nov 1, 2023</div>
+        </div>
+        
+        <section class="body">
+          <h1 id="0x04--systemdo-or-systemdont">0x04 — systemdo or systemdon&rsquo;t</h1>
+<p>Sometimes in the *nix community, people will tell you things like &ldquo;systemd is bad&rdquo; and you shouldn&rsquo;t use it.<br>
+After that, they will bandy reasons why systemd is considered to be problematic.</p>
+<p>For any normal or informed user, some of the arguments against systemd may hold some validity.<br>
+However, for users unfamiliar with nix, these are misleading justifications for not utilizing systemd.<br>
+This blog entry is specifically targeted towards the latter crowd.</p>
+<p>Systemd is often referred to as a &ldquo;software suite,&rdquo; which means it offers a wide range of tools. However, many of these tools are complex and require advanced knowledge to utilize effectively.<br>
+None of systemd&rsquo;s components are inherently bad.</p>
+<p>The problem with systemd is that the entirety of the software suite is executed as pid 1.<br>
+The first process is the one that on many systems is the init system. It is the highest parent process in the hierarchy, as it is executed by the kernel.<br>
+In certain scenarios, this is what you may desire. You may want a reliable and battle tested process running as the init, especially on servers.You might also consider having it on your desktop for convenience and accessibility.<br>
+The thing is what works for others may not work for you.</p>
+<p>People have asked me what init they should use. The simplest answer, use the one that works best for you. If systemd is compatible with your system, why switch it?<br>
+On top of that, some Linux distributions hard depend on systemd. For example, <a href="https://archlinux.org/">Arch Linux</a>  where the entire system is built on the premise of using systemd. replacing it, while it can be done, is a quite annoying procedure.<br>
+So all of this is to say: If you&rsquo;re a new user of nix and unsure about which init to use, it&rsquo;s best to stick with the default init.</p>
+<p>To quote a friend of mine, <em>&ldquo;Linux users are all about freedom of choice, right up until someone&rsquo;s choice differs from theirs.&rdquo;</em></p>
+<p>On the other hand, if you&rsquo;re the redpilled based user who is preaching to the newer, pure linux users:Shut up. Allow them to experience the advantages or disadvantages of the software themselves.
+After all, Despite my dislike for systemd, it does get the job done.</p>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+<footer>
+  <small>© 2025 Senath Methsuka</small>
+</footer>
+
+</footer>
+
+</div>
+    </body>
+</html>
