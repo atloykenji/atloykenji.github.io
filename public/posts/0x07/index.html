@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>0x07 - Senath&#39;s Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="0x07 — Ways to Feed Input into Your C/C&#43;&#43; Programs I was working through some problem sets on Hackerrank, and something got me curious:
+how exactly are these sample input test cases being passed into the program before it runs and spits out the expected output?
+The point is Hackerrank doesn’t use a obvious way to accept arguments Instead, it rely on scanf or std::cin. which got me wondering about all the ways a C/C&#43;&#43; program can actually accept external input." />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/posts/0x07/">
+  <meta property="og:site_name" content="Senath&#39;s Blog">
+  <meta property="og:title" content="0x07">
+  <meta property="og:description" content="0x07 — Ways to Feed Input into Your C/C&#43;&#43; Programs I was working through some problem sets on Hackerrank, and something got me curious:
+how exactly are these sample input test cases being passed into the program before it runs and spits out the expected output?
+The point is Hackerrank doesn’t use a obvious way to accept arguments Instead, it rely on scanf or std::cin. which got me wondering about all the ways a C/C&#43;&#43; program can actually accept external input.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-13T19:04:19+05:30">
+    <meta property="article:modified_time" content="2025-05-13T19:04:19+05:30">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="0x07">
+  <meta name="twitter:description" content="0x07 — Ways to Feed Input into Your C/C&#43;&#43; Programs I was working through some problem sets on Hackerrank, and something got me curious:
+how exactly are these sample input test cases being passed into the program before it runs and spits out the expected output?
+The point is Hackerrank doesn’t use a obvious way to accept arguments Instead, it rely on scanf or std::cin. which got me wondering about all the ways a C/C&#43;&#43; program can actually accept external input.">
+
+        <link href="http://localhost:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.6a0f23ea50fd34b46fee262a5a68e17d458c51a2bc99ba1ba018065de6b180c3.css" />
+		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="http://localhost:1313/css/dark.50b57e12d401420df23965fed157368aba37b76df0ecefd0b1ecd4da664f01a0.css"   />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://localhost:1313/">Senath&#39;s Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/contact">Contact</a>
+		
+		
+	</nav>
+</header>
+
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">0x07</h1>
+          <div class="meta">Posted on May 13, 2025</div>
+        </div>
+        
+        <section class="body">
+          <h1 id="0x07--ways-to-feed-input-into-your-cc-programs">0x07 — Ways to Feed Input into Your C/C++ Programs</h1>
+<p>I was working through some problem sets on Hackerrank, and something got me curious:<br>
+how exactly are these sample input test cases being passed into the program before it runs and spits out the expected output?<br>
+The point is Hackerrank doesn’t use a obvious way to accept arguments Instead, it rely on scanf or std::cin.  which got me wondering about all the ways a C/C++ program can actually accept external input.</p>
+<p>I ended up going down the rabbit hole, doing some digging and playing around with different approaches. This post is the result - a quick tour of different ways you can pass data into your programs.</p>
+<h2 id="1-the-classic-main-arguments">1. The Classic main Arguments</h2>
+<p>You&rsquo;ve probably seen this boilerplate a hundred times:</p>
+<pre tabindex="0"><code>int main(int argc, char* argv[])
+{
+    ...
+}
+</code></pre><p>This is the standard way to pass command-line arguments into a C or C++ program  So users can execute the program and supply parameters at the same time.</p>
+<pre tabindex="0"><code>./myProgram.out param1 param2
+</code></pre><p>and in terms of code, argc tells us how many parameters sending in included the first one which is the name of the program (./myProgram.out itself). argc is 3 in this case.</p>
+<p>We can access actual value for each one via argv i.e. argv[0] is ./myProgram.out, argv[1] = param1 and so on.</p>
+<h2 id="2-standard-input">2. Standard Input</h2>
+<p>Now this one&rsquo;s pretty cool. Arguably the most interesting way to feed data into your program. Instead of passing arguments at launch, you let the program read from standard input - using scanf() in C or std::cin in C++.</p>
+<p>What makes this method so versatile is the OS-level support for piping. You can pipe output from one program directly into another as input. This makes it very convenient and flexible especially for competitive programming and platform such as Hackerrank to be able to operate. That’s how they run your submitted code with different test cases without showing you any of the plumbing.</p>
+<p>Say your program expects two numbers separated by a space, like this:</p>
+<pre tabindex="0"><code>1 5
+</code></pre><p>and output requirement is a result of addition of those two numbers</p>
+<pre tabindex="0"><code>6
+</code></pre><p>Simple. All your program needs to do is grab two integers from input, add them, and print the result. Here&rsquo;s how you&rsquo;d do it in both C and C++ :</p>
+<h3 id="c-program">C program</h3>
+<pre tabindex="0"><code>#include &lt;stdio.h&gt;
+
+int main(int argc, char* argv[])
+{
+    int a, b;
+    scanf(&#34;%d %d&#34;, &amp;a, &amp;b);
+    printf(&#34;%d&#34;, a + b);
+    return 0;
+}
+</code></pre><h3 id="c-program-1">C++ program</h3>
+<pre tabindex="0"><code>#include &lt;iostream&gt;
+
+int main(int argc, char* argv[])
+{
+    int a, b;
+    std::cin &gt;&gt; a &gt;&gt; b;
+    std::cout &lt;&lt; (a + b);
+    return 0;
+}
+</code></pre><p>Now here’s where things get fun. Instead of typing the input manually, you can pipe it into the program like this:</p>
+<pre tabindex="0"><code>echo &#34;1 5&#34; | ./myProgram.out
+</code></pre><p>This sends &ldquo;1 5&rdquo; directly into your program’s standard input. Both scanf() and std::cin will read it as if it were typed in manually. Same result, just slicker.</p>
+<p>Not only that, we can pipe input from file as follows</p>
+<pre tabindex="0"><code>./myProgram.out &lt; input.txt
+</code></pre><p>Where input.txt might contain either a single line:</p>
+<pre tabindex="0"><code>1 5
+</code></pre><p>Or even multiple lines:</p>
+<pre tabindex="0"><code>1
+5
+</code></pre><p>It will work the same!<br>
+the input just needs to match what the program expects.</p>
+<p>So imagine further that we can chain programs together with pipes, creating a little assembly line of logic:</p>
+<pre tabindex="0"><code>input.txt &gt; ./myProgram.out | ./myProgram2.out | ./myProgram3.out
+</code></pre><p>One program’s output becomes another’s input — and so on. It’s like Unix magic. Functional, flexible, and very fun to mess with once you get the hang of it.</p>
+<h2 id="3-redirecting-stdcin-to-read-from-a-file-c-only">3. Redirecting std::cin to Read from a File (C++ Only)</h2>
+<p>Here’s a neat trick that’s a little more niche — but also kinda slick if you’re into C++ streams.</p>
+<p>So, you know how std::cin normally reads from standard input? Turns out you can swap out its internal buffer and make it read from something else - like a file. This works because std::cin ultimately inherits from std::basic_ios, which has a method called rdbuf() - giving you access to the stream buffer underneath.</p>
+<p>In plain English: we hijack std::cin and point it at a file instead.</p>
+<pre tabindex="0"><code>// content we want to read from via std::cin
+std::ifstream fileIn(&#34;res/sample_input.txt&#34;);
+
+// save pointer to stream buffer of std::cout
+auto coutSBuf = std::cin.rdbuf();
+
+// substitute internal std::cout buffer with buffer of fileIn
+std::cin.rdbuf(fileIn.rdbuf());
+
+// read content from std::cin into a string
+std::string readString;
+std::cin &gt;&gt; readString;
+std::cout &lt;&lt; readString &lt;&lt; std::endl;
+</code></pre><p>That’s it! Now std::cin thinks the file is its standard input so when you do std::cin &raquo; readString, it actually pulls from &ldquo;res/sample_input.txt&rdquo;.</p>
+<p>Just remember to restore the original stream buffer later if you care about returning to normal input behavior.  Otherwise, std::cin will stay confused.</p>
+<h2 id="extra-4-redirecting-stdin-and-stdout-in-c">(Extra) 4. Redirecting stdin and stdout in C</h2>
+<p>If you&rsquo;re more into classic C, there&rsquo;s also a way to redirect stdin and stdout. Kind of like what we did with std::cin in C++, but a bit rougher around the edges.</p>
+<p>The usual approach involves freopen(), and if you’re feeling fancy (or careful), you can pair it with dup() to back things up and restore later. This lets you reroute input and output streams to and from files, effectively changing where scanf() or printf() talk to.</p>
+<p>That said, it’s not exactly elegant. and definitely not the most portable or reliable method out there. Some platforms handle it fine, others might get grumpy.</p>
+<p>Anyway, that’s all for now&hellip; more posts soon.</p>
+<p>see ya</p>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+<footer>
+  <small>© 2025 Senath Methsuka | Powered by Hugo</small>
+</footer>
+
+</footer>
+
+</div>
+    </body>
+</html>

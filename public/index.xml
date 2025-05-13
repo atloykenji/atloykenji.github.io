@@ -6,21 +6,28 @@
     <description>Recent content on Senath&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 04 May 2025 15:38:50 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 13 May 2025 19:04:19 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>0x07</title>
+      <link>http://localhost:1313/posts/0x07/</link>
+      <pubDate>Tue, 13 May 2025 19:04:19 +0530</pubDate>
+      <guid>http://localhost:1313/posts/0x07/</guid>
+      <description>0x07 — Ways to Feed Input into Your C/C++ Programs I was working through some problem sets on Hackerrank, and something got me curious:&#xA;how exactly are these sample input test cases being passed into the program before it runs and spits out the expected output?&#xA;The point is Hackerrank doesn’t use a obvious way to accept arguments Instead, it rely on scanf or std::cin. which got me wondering about all the ways a C/C++ program can actually accept external input.</description>
+    </item>
     <item>
       <title>0x06</title>
       <link>http://localhost:1313/posts/0x06/</link>
       <pubDate>Sun, 04 May 2025 15:38:50 +0530</pubDate>
       <guid>http://localhost:1313/posts/0x06/</guid>
-      <description>0x06 — why I&amp;rsquo;ve been gone It’s been a while&amp;hellip; Yeah, I know. So&amp;hellip; where were we? I think I fell into a black hole somewhere around mid-2024. Climbing out now, coffee in hand.. If you’re wondering what happened — I did my A/L exam. Yep, That was the boss battle of 2024. Spoiler: I made it out alive&#xA;The results came out last week, and I actually did well enough to get into a government uni.</description>
+      <description>0x06 — why I&amp;rsquo;ve been gone So… what year is it again? I think I blinked sometime in 2024 and woke up in a new timeline.&#xA;If you’re wondering what happened — I did my A/L exam. Yep, That was the boss battle of 2024. Spoiler: I made it out alive&#xA;The results came out last week, and I actually did well enough to get into a government uni. So yeah, I’ll be heading into CS or something and probably drowning in Math.</description>
     </item>
     <item>
       <title>0x05</title>
       <link>http://localhost:1313/posts/0x05/</link>
       <pubDate>Fri, 08 Dec 2023 06:21:47 +0530</pubDate>
       <guid>http://localhost:1313/posts/0x05/</guid>
-      <description>0x05 — you won&amp;rsquo;t see me for a year or two Just a quick note if you’ve been reading along, this has always been a personal blog. Lately, it&amp;rsquo;s been all programming talk, but I’m feeling like it’s time to slow down and shift focus a bit There’s something important I need to give my full attention to&amp;hellip; something that’s been quietly building in the background for a while now. It’s not burnout, and it’s not goodbye&amp;hellip; just a pause while I try to give this next chapter the space it deserves.</description>
+      <description>0x05 — you won&amp;rsquo;t see me for a year or two Just a quick note if you’ve been reading along, this has always been a personal blog. Lately, it&amp;rsquo;s been all programming talk, but I’m feeling like it’s time to slow down and shift focus a bit&#xA;There’s something that’s been quietly building in the background for a while now. It’s not burnout, and it’s not goodbye&amp;hellip; just a pause while I try to give this next chapter the space it deserves.</description>
     </item>
     <item>
       <title>0x04</title>
@@ -55,7 +62,7 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>Hi, I&amp;rsquo;m Senath.&#xA;I’m a 20y old guy from Sri Lanka. I like low-level programming and other computer stuff. Outside of coding, you’ll find me diving into math, exploring music, or getting lost in a good book. I’m passionate about open-source software and I use GNU/Linux for nearly everything. Occasionally, you’ll find me playing games on Steam&#xA;This is the space where my chaotic thoughts find order, a realm where I am in control, untouched by manipulation or distortion.</description>
+      <description>Hi, I&amp;rsquo;m Senath.&#xA;I’m a 20y old guy from Sri Lanka. I like low-level programming and other computery things.&#xA;Outside of coding, I’m usually diving into a good book, exploring music, or playing video games.&#xA;I’m passionate about open-source software and I&amp;rsquo;m a longterm user and lover of Linux.&#xA;This is the space where my chaotic thoughts find order, a realm where I am in control, untouched by manipulation or distortion.</description>
     </item>
     <item>
       <title>Contact</title>
